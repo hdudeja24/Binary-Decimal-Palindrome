@@ -9,8 +9,9 @@ public class Project1 {
 		String input = sc.nextLine();
 		int [] range = FilterInput(input);
 
-		for (Integer num: range)
-			System.out.println(num);
+		boolean isValidInput = ValidInput(range);
+		System.out.println(isValidInput);
+
 	}
 
 	private static int [] FilterInput(String line){
@@ -25,6 +26,27 @@ public class Project1 {
 		 	range[i] = Integer.parseInt(nums[i]);			// Inserting int value of String array
 
 		 return range;										// Return array
+	}
+
+	private static boolean ValidInput(int nums[]){
+		/**
+		 * This function checks the two conditions for our input to be valid.
+		 * returns false if  any values is less than or equal to 0
+		 * returns false if first number is larger than the second
+		 * else returns true
+		 **/
+
+		// To check if any values is less than or equal to 0
+		if(nums[0] <= 0 || nums[1] <= 0){
+			System.out.println("Error: Invalid value entered. All values must be greater than zero. Try Again.");
+			return false;
+		}
+		// To check if the first number is larger than the second
+		if(nums[0]  > nums[1] ){
+			System.out.println("Error: First number is larger than second number. Try Again.");
+			return false;
+		}
+		return true;
 	}
 
 }
