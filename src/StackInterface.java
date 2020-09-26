@@ -1,9 +1,9 @@
 public interface StackInterface <Type> {
-    public Type push (Type item);
+    public void push (Type item);
 
-    public Type pop (Type item);
+    public Type pop ();
 
-    public Type peek (Type item);
+    public Type peek ();
 
     public boolean empty();
 
