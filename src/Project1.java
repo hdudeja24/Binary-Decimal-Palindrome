@@ -14,7 +14,7 @@ public class Project1 {
 		if (isValidInput){
 			// We get here if the user's input is valid
 		}
-		
+
 	}
 
 	private static int [] FilterInput(String line){
@@ -49,6 +49,16 @@ public class Project1 {
 			System.out.println("Error: First number is larger than second number. Try Again.");
 			return false;
 		}
+		return true;
+	}
+
+	private static boolean isDecimalPalindrome(int num)
+	{
+		/**
+		 * Function checks if the given number is a palindrome.
+		 * Returns true if it is, else return false
+		 **/
+		
 		return true;
 	}
 
