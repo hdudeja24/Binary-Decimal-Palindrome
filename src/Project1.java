@@ -10,8 +10,11 @@ public class Project1 {
 		int [] range = FilterInput(input);
 
 		boolean isValidInput = ValidInput(range);
-		System.out.println(isValidInput);
 
+		if (isValidInput){
+			// We get here if the user's input is valid
+		}
+		
 	}
 
 	private static int [] FilterInput(String line){
